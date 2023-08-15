@@ -28,28 +28,28 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: ["https://store-rutesid.netlify.app/", "http://localhost:3000"],
+    origin: ["https://store-rutesid.netlify.app"],
   })
 );
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use((req: Request, res: Response, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*" );
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET,OPTIONS,PATCH,DELETE,POST,PUT"
-  );
-  res.setHeader("Access-Control-Allow-Headers", "*");
-  res.setHeader(
-    'Access-Control-Allow-Headers',
-    'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization'
-  )
-  if (req.method === 'OPTIONS') {
-    res.status(200).end()
-  }
-  next();
-});
+// app.use((req: Request, res: Response, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "https://store-rutesid.netlify.app" );
+//   res.setHeader(
+//     "Access-Control-Allow-Methods",
+//     "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+//   );
+//   res.setHeader("Access-Control-Allow-Headers", "*");
+//   res.setHeader(
+//     'Access-Control-Allow-Headers',
+//     'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization'
+//   )
+//   if (req.method === 'OPTIONS') {
+//     res.status(200).end()
+//   }
+//   next();
+// });
 
 app.get("/favicon.ico", (req: Request, res: Response) => {
   res.status(204).end();
