@@ -49,8 +49,12 @@ function Cart() {
     prevQuantity: number
   ) => {
     // const textboxText = e.target.value.replace(/^0+/, inputQuantity.toString());
-    const textboxText = e.target.value.replace(/^0+/, item.quantity.toString());
+    const textboxText = e.target.value.replace(/^0+/, '');
     const target = parseInt(textboxText)
+
+    console.log('textboxText : ',textboxText)
+    console.log('target : ',target)
+
     const number = isNaN(target) ? item.quantity : target;
     const value = number < 0 ? number * -1 : number;
     // setInputQuantity((prevInputQuantity) => ({
