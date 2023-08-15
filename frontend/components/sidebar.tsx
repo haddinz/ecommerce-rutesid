@@ -119,7 +119,7 @@ function Sidebar() {
                 <Link to="/" className="text-xl font-bold md:text-2xl">
                   rutes.ID
                 </Link>
-                <Link to="/product/search">Product</Link>
+                <Link to="/search">Product</Link>
                 <Link to="/user/signin">Login</Link>
                 <Link to="/user/register">Signup</Link>
               </div>
