@@ -1,0 +1,21 @@
+{
+  "name": "react-ts",
+  "version": "1.0.0",
+  "description": "React Vite Typescript",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && npm install && npm run build && cd ../frontend && npm install && npm run build",
+    "start": "node backend/build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haddinz/react-vite-ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haddinz/react-vite-ts/issues"
+  },
+  "homepage": "https://github.com/haddinz/react-vite-ts#readme"
+}
