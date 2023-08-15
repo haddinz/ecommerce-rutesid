@@ -4,8 +4,8 @@ import axios from "axios";
 const APIClient = axios.create({
   baseURL:
     process.env.NODE_ENV !== "development"
-      ? "https://backend-rutesid.vercel.app"
-      : "http://localhost:4000",
+      ? "https://backend-store-rutesid.vercel.app"
+      : "https://backend-store-rutesid.vercel.app",
   headers: { "Content-Type": "application/json" },
 });
 
